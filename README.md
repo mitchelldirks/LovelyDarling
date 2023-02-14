@@ -5,7 +5,7 @@ Cuma ngingetin kamu aja, rasa ini ga perlu kamu balas, karna cintaku ini tidak n
 
 > For Woman <a href="https://t.me/LovelyDarlingBot">t.me/LovelyDarlingBot</a>
 
-> For Men <a href="https://t.me/LovelyDarlingBot">t.me/LovelyDarlingGalGaBot</a>
+> For Men <a href="https://t.me/LovelyDarlingGalGaBot">t.me/LovelyDarlingGalGaBot</a>
 
 Cronjob
 ```
