@@ -1,11 +1,12 @@
 <?php
 include 'function.php';
-if (!isset($_GET['bot'])) {
-    echo "Tambahkan <b>bot</b> terlebih dahulu. ?bot";
-    exit;
-}else{
-    $bot = $_GET['bot'];
-}
+// if (!isset($_GET['bot'])) {
+//     echo "Tambahkan <b>bot</b> terlebih dahulu. ?bot";
+//     exit;
+// }else{
+//     $bot = $_GET['bot'];
+// }
+$bot = isset($_GET['bot']) ? $_GET['bot'] : null;
 if (!isset($_GET['act'])) {
     echo "Masukan <b>act</b>. ?act";
     exit;

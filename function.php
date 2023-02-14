@@ -1,5 +1,5 @@
 <?php 
-$conn = new mysqli("localhost","root","","databasemu"); 
+$conn = new mysqli("localhost","root","","databasemu");
 
 function curl($url, $data=null, $method="POST", $content_type="application/json", $headers=array()){
     $header[] = "Accept: ".$content_type;
@@ -39,14 +39,14 @@ function curl($url, $data=null, $method="POST", $content_type="application/json"
 }
 function getCredidential($bot_name,$act='broadcast')
 {
+    $botname = $bot_name == null ? "":" bsl.bot_name = '".$bot_name."' and ";
     global $conn;
-    $query = mysqli_query($conn,
-        "SELECT * from bot_setting_list bsl 
-        join bot_setting_service bss 
-        where 
-        bsl.bot_name = '".$bot_name."' 
-        and (bsl.is_active = 1 and bss.is_active = 1)"
-    );
+    $sql = "SELECT * from bot_setting_list bsl 
+    join bot_setting_service bss on bsl.id = bss.bot_id
+    where 
+    ".$botname."
+    (bsl.is_active = 1 and bss.is_active = 1)";
+    $query = mysqli_query($conn,$sql);
     return $query;
 }
 function sendtelegram($type,$act,$message)
